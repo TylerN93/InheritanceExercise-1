@@ -34,6 +34,44 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
-        }
-    }
+            var myBird = new Bird();
+            {
+                myBird.Canfly = true;
+                myBird.EatsBirdFood = true;
+                myBird.LivesInCage = true;
+                myBird.WingColor = "Green";
+            }
+
+            var aligator = new Reptile();
+            {
+                aligator.IsCarnivore = true;
+                aligator.IsColdBlooded = true;
+                aligator.LivesInWater = true;
+                aligator.Age = 10;
+            }
+
+            var myAnimals = new Animal[] { myBird, aligator };
+
+            Console.WriteLine($"My Animals Descriptions:");
+
+            foreach (var animal in myAnimals)
+            {
+
+
+                Console.WriteLine($"Has eyes:{animal.hasEyes}");
+
+                Console.WriteLine($"Has mouth:{animal.hasMouth}");
+
+                Console.WriteLine($"Needs sleep:{animal.needsSleep}");
+
+                Console.WriteLine($"Leg count:{animal.legCount}");
+
+                Console.WriteLine();
+
+            }
+
+
+
+            }
+        }    
 }
